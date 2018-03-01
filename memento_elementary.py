@@ -112,7 +112,7 @@ class TestMethods(unittest.TestCase):
         m.increment([1.0, 1.0, 1.0])
         m.increment([1.0, 1.0, 1.0])
         m.revert(checkpoint)
-        self.assertEqual([468.08, 171.478, 7.4], m.weights) # SUCCESS
+        self.assertEqual([468.08, 171.478, 7.4], m.weights) 
 
 
 if __name__ == "__main__":
