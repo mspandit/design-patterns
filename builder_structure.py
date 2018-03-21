@@ -3,12 +3,13 @@ import abc
 
 class Director(object):
     """Constructs an object using the Builder interface."""
-    def __init__(self):
+    def __init__(self, builder):
         super(Director, self).__init__()
+        self.builder = builder
         
     def construct(self):
         for obj in self.structure:
-            obj.build_part()
+            self.builder.build_part()
 
 
 class Builder(metaclass=abc.ABCMeta):
@@ -20,6 +21,12 @@ class Builder(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def build_part(self):
+        """Called by Director"""
+        pass
+
+    @abc.abstractmethod
+    def get_result(self):
+        """Called by Client (creator of ConcreteBuilder and Director)"""
         pass
 
 
