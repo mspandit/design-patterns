@@ -36,7 +36,7 @@ Pillow==5.0.0
 pluggy==0.6.0
 ply==3.11
 posix-ipc==1.0.4
-protobuf==3.5.2.post1
+protobuf==3.18.3
 py==1.5.2
 py-cpuinfo==3.3.0
 pycodestyle==2.3.1
